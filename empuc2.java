@@ -1,23 +1,27 @@
+public class empwageuc4 {
 
 
-
-import java.util.*;
-public class cartesianuc3 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter 3length of first line1");
-        int line1 = sc.nextInt();
-        System.out.print("Enter length of second line2");
-        int line2 = sc.nextInt();
+        int rateperhrs= 20;
+        int fulltime= 1;
+        int parttime= 2;
+        int empwage= 0;
+        int emphr = 0;
+        int empcheck = (int)Math.floor(Math.random()*10)%3;
+        switch (empcheck)
+        {
+            case 1:
+                emphr = 4;
+                break;
 
-        if (line1 > line2) {
-            System.out.print(line1 + " line1 is greater then line2");
+            case 2:
+                emphr = 8;
+                break;
+
+            default:
+                emphr =0;
+                break;
         }
-        else if (line1 < line2){
-            System.out.print( line1+ " line2 is lesser then line2");
-        }
-        else
-            System.out.print( "both lines are equal");
+        empwage =  ( emphr * rateperhrs );
+        System.out.println ( empwage );
     }
-}
-
